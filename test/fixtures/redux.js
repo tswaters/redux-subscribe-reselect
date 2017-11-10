@@ -14,6 +14,11 @@ const REMOVE_WIDGET = 'REMOVE_WIDGET'
 let widget_id = 0
 let item_id = 0
 
+export const reset = () => {
+  widget_id = 0
+  item_id = 0
+}
+
 export const addItem = name => ({type: ADD_ITEM, id: widget_id++, name})
 export const removeItem = id => ({type: REMOVE_ITEM, id})
 export const getItems = createSelector(state => state.items, items => items)
