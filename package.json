@@ -11,8 +11,11 @@
     "lint": "eslint src test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "prebuild": "rimraf lib",
-    "build": "babel src -d lib"
+    "build": "babel --copy-files src -d lib"
   },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tswaters/redux-subscribe-reselect.git"
