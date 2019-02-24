@@ -30,11 +30,11 @@ export const getWidgets = createSelector(state => state.widgets, widgets => widg
 export default (state = defaultState, action) => {
   switch (action.type) {
     case ADD_ITEM:
-      return {...state, items: state.items.concat({id: action.id, name: action.name})}
+      return {...state, items: [...state.items, {id: action.id, name: action.name}]}
     case REMOVE_ITEM:
       return {...state, items: state.items.filter(i => i.id !== action.id)}
     case ADD_WIDGET:
-      return {...state, widgets: state.widgets.concat({id: action.id, name: action.name})}
+      return {...state, widgets: [...state.widgets, {id: action.id, name: action.name}]}
     case REMOVE_WIDGET:
       return {...state, widgets: state.widgets.filter(i => i.id !== action.id)}
     default:

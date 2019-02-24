@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "locale": "en-ca",
+    "target": "es6",
+    "declaration": false,
+    "strictNullChecks": true,
+    "noImplicitUseStrict": false,
+    "allowUnreachableCode": false,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "module": "commonjs",
+    "lib": [
+      "es2015",
+      "es2017",
+      "dom"
+    ]
+  },
+  "files": ["test/test.ts"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
