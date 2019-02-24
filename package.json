@@ -10,7 +10,7 @@
     "test": "tsc && nyc --reporter=text --reporter=html mocha --opts mocha.opts",
     "lint": "eslint src test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "prebuild": "rimraf lib",
+    "prebuild": "rimraf lib && mkdirp lib",
     "build": "babel --copy-files src -d lib"
   },
   "files": [
@@ -45,6 +45,7 @@
     "@types/node": "^11.9.5",
     "coveralls": "^3.0.3",
     "eslint": "^5.14.1",
+    "mkdirp": "^0.5.1",
     "mocha": "^6.0.1",
     "nyc": "^13.3.0",
     "redux": "^4.0.1",
